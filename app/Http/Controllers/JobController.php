@@ -19,4 +19,8 @@ class JobController extends Controller
             'title' => 'Available Jobs'
         ]);
     }
+
+    public function create() {
+        return view('jobs.create');
+    }
 }
