@@ -9,9 +9,10 @@ Route::get('/', function () {
 Route::get('/jobs', function () {
     $title = 'Available Jobs';
     $jobs = [
-        'Software Engineer',
+        'Web Designer',
         'Web Developer',
-        'Data Scientist',
+        'Software Engineer',
+        'Data Analyst'
     ];
 
     return view('jobs.index', compact('title', 'jobs'));
