@@ -1,6 +1,4 @@
-@extends('Layout')
-
-@section('content')
+<x-layout>
 <h1>{{$title}}</h1>
 @if(!empty($jobs))
 <ul>
@@ -11,4 +9,4 @@
 @else
 <p>No jobs available</p>
 @endif
-@endsection
+</x-layout>
