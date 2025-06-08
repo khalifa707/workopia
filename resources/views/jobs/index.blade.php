@@ -1,9 +1,12 @@
 <x-layout>
 <h1>{{$title}}</h1>
-@if(!empty($jobs))
+@if($jobs->count() > 0)
 <ul>
     @foreach($jobs as $job)
-        <li>{{$job}}</li>
+        <li>
+            <h3>{{$job->title}}</h3>
+            <p>{{$job->description}}</p>
+        </li>
     @endforeach
 </ul>
 @else
