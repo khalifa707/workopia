@@ -14,15 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Truncate the users table
+        // Truncate tables
+        DB::table('job_listings')->truncate();
         DB::table('users')->truncate();
 
-        // Truncate the job_listings table
-        DB::table('job_listings')->truncate();
-
-        $this->call([
-            RandomUserSeeder::class,
-            RandomJobSeeder::class,
-        ]);
+        $this->call(RandomUserSeeder::class);
+        $this->call(JobSeeder::class);
     }
 }
