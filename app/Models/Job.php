@@ -11,7 +11,6 @@ class Job extends Model
 {
     use HasFactory;
 
-    public mixed $company_logo;
     protected $table = 'job_listings';
 
     protected $fillable = [
